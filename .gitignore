@@ -1,0 +1,38 @@
+# Rust 编译产物
+target/
+**/*.rs.bk
+
+# Node 依赖和构建产物（Tauri 前端）
+node_modules/
+dist/
+build/
+*.log
+
+# IDE 和编辑器
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 操作系统
+.DS_Store
+Thumbs.db
+
+# 环境变量
+.env
+.env.local
+
+# Tauri 原生编译中间产物
+src-tauri/gen/
+src-tauri/target/
+mobile-app/gen/
+mobile-app/target/
+*.apk
+*.ipa
+*.dmg
+*.deb
+*.AppImage
+
+# 私密配置（如果有）
+*.pem
+*.key

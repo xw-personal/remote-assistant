@@ -1,0 +1,8 @@
+[workspace]
+resolver = "2"
+members = [
+    "shared",
+    "cloud-relay",
+    "pc-agent",
+    "mobile-app/src-tauri",   # Tauri 的 Rust 项目在这里
+]

@@ -27,3 +27,8 @@ rustls = "0.23"
 rustls-pemfile = "2"
 # 可选：认证
 jsonwebtoken = "10.4.0"
+
+# 数据库与工具
+rusqlite = { version = "0.35", features = ["bundled"] }
+rand = "0.9"
+bcrypt = "0.17"

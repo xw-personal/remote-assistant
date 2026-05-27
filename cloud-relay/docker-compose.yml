@@ -1,0 +1,9 @@
+services:
+  cloud-relay:
+    image: ghcr.io/xw-personal/remote-assistant/cloud-relay:latest
+    container_name: cloud-relay
+    restart: unless-stopped
+    ports:
+      - "9800:9800"
+    volumes:
+      - ./data:/data

@@ -9,6 +9,9 @@ COPY Cargo.toml Cargo.lock ./
 COPY shared/ shared/
 COPY cloud-relay/Cargo.toml cloud-relay/
 
+# 移除 Docker 中不存在的 workspace 成员
+RUN sed -i '/pc-agent\/src-tauri/d;/mobile-app\/src-tauri/d' Cargo.toml
+
 # 创建 placeholder 源码以预编译依赖
 RUN mkdir -p cloud-relay/src && echo "fn main() {}" > cloud-relay/src/main.rs && \
     cargo build --release -p cloud-relay 2>/dev/null || true && \
